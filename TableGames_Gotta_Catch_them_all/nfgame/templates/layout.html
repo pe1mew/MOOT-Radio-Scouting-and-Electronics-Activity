@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <title>NFGame</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/uikit.min.css') }}" />
+    <script src="{{ url_for('static', filename='js/jquery-min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/uikit.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/uikit-icons.min.js') }}"></script>
+    <meta name="viewport" content="width=300">
+    <style>
+      html, body {
+        margin: 0px;
+	padding: 0px;
+	background-color: {{ color }};
+      }
+    </style>
+  </head>
+  <body>
+    <div class="uk-text-large uk-align-center">
+      {% block body %}{% endblock %}
+    </div>
+  </body>
+</html>
+

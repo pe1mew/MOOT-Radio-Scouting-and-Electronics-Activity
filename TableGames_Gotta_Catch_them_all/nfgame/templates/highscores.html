@@ -1,0 +1,35 @@
+{% extends "layout-overview.html" %}
+{% block body %}
+  <h1 class="uk-heading-primary uk-text-center uk-heading-divider">{{ type }}</h1>
+  
+  <center>
+    <div class="uk-text-large uk-align-center">
+
+    <table class="uk-table uk-align-center">
+      <caption></caption>
+      <thead>
+        <tr>
+          <td>Name</td>
+          <td>Duration</td>
+        </tr>
+      </thead>
+      <tbody>
+        {% for entry in entries %}
+        <tr>
+          <td>{{ entry.username }}</td>
+          <td>
+            {% if entry.duration == '99:99:99' %}
+            No time yet
+            {% else %}
+            {{ entry.duration }}
+            {% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    </div>
+  </center>
+{% endblock %}
+

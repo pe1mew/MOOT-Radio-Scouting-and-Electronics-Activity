@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <head>
+    <title>NFGame</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/uikit.min.css') }}" />
+    <script src="{{ url_for('static', filename='js/jquery-min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/uikit.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/uikit-icons.min.js') }}"></script>
+    <meta http-equiv="refresh" content="{{ refresh }}">
+  </head>
+  <body>
+    <div>
+      {% block body %}{% endblock %}
+    </div>
+  </body>
+</html>
+
